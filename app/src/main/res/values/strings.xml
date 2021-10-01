@@ -64,4 +64,25 @@
     <string name="btn_updateCardDetails">update my card details</string>
 
 
+<!--    Anuka Starts here-->
+    <string name="etUserName">Enter User Name</string>
+    <string name="etUserPassword">Enter Your Password</string>
+    <string name="btnUserLogIn">Log In</string>
+    <string name="tvDeviceName">Device Name</string>
+    <string name="tvManufacturer">Manufacturer</string>
+    <string name="tvYear">Year</string>
+    <string name="tvPrice">Price (Rs.)</string>
+    <string name="tvSpecialNotes">Special Notes</string>
+    <string name="btnDisplayAll">Display All</string>
+    <string name="btnAdd">Add</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnAdminLogin">Admin Login</string>
+    <string name="tvUsername">Username</string>
+    <string name="btn_home3">Sell Device</string>
+    <string name="btn_home5">User Sellings</string>
+
+
+    <!--    Anuka Ends here-->
+
 </resources>

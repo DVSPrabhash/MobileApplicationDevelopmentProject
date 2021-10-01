@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class logIn extends AppCompatActivity {
 
+    public static final String EXTRA_USERNAME = "com.example.nightmare.USERNAME";
+
     //Register all btn and eText
     EditText username, password;
     Button btn_signIn, btn_signUp;
@@ -44,6 +46,7 @@ public class logIn extends AppCompatActivity {
                     if(result == true){
                         Toast.makeText(logIn.this, "Login Success", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),home.class);
+                        intent.putExtra(EXTRA_USERNAME, user);
                         startActivity(intent);
                     }else{
                         Toast.makeText(logIn.this, "Invalid username or password", Toast.LENGTH_SHORT).show();

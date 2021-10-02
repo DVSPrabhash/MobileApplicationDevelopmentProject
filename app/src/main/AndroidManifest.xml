@@ -10,9 +10,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NightMare">
         <activity
-            android:name=".adminHome"
-            android:label="Admin Panel"
+            android:name=".xiomi10Activity"
             android:exported="true" />
+        <activity
+            android:name=".samsungs9Activity"
+            android:exported="true" />
+        <activity
+            android:name=".samsungnote10Activity"
+            android:exported="true" />
+        <activity
+            android:name=".samsungm21Activity"
+            android:exported="true" />
+        <activity
+            android:name=".oppof12Activity"
+            android:exported="true" />
+        <activity
+            android:name=".nokiamacActivity"
+            android:exported="true" />
+        <activity
+            android:name=".iphonexActivity"
+            android:exported="true" />
+        <activity
+            android:name=".iphone7Activity"
+            android:exported="true" />
+        <activity
+            android:name=".SummaryActivity"
+            android:exported="true"
+            android:parentActivityName=".InfoActivity"
+            android:label="Cart"/>
+        <activity
+            android:name=".MainTharushaActivity"
+            android:exported="true"
+            android:parentActivityName=".home"
+            android:label="Devices"/>
+        <activity
+            android:name=".InfoActivity"
+            android:exported="true"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"/>
+        <activity
+            android:name=".adminHome"
+            android:exported="true"
+            android:label="Admin Panel" />
         <activity
             android:name=".UpdateActivity"
             android:parentActivityName=".MainHimashaActivity" />
@@ -22,31 +61,34 @@
             android:parentActivityName=".MainHimashaActivity" />
         <activity
             android:name=".MainHimashaActivity"
-            android:parentActivityName = ".home"
-            android:label="Devices Library" />
+            android:label="Devices Library"
+            android:parentActivityName=".home" />
         <activity
             android:name=".AdminInterfaceIt20149994Activity"
-            android:parentActivityName = ".home"
+            android:exported="true"
             android:label="View All Devices"
-            android:exported="true" />
+            android:parentActivityName=".home" />
         <activity
             android:name=".UserInterfaceIt20149994Activity"
-            android:parentActivityName = ".home"
+            android:exported="true"
             android:label="Sell My Devices"
-            android:exported="true" />
+            android:parentActivityName=".home" />
         <activity
             android:name=".home"
-            android:label="Home"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Home" />
         <activity
             android:name=".addMyCard"
-            android:parentActivityName = ".home"
+            android:exported="true"
             android:label="@string/addMyCardDetails"
-            android:exported="true" />
+            android:parentActivityName=".home" />
         <activity
             android:name=".logIn"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
+
         <activity
             android:name=".register"
             android:exported="true"
@@ -57,6 +99,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".database.OrderProvider"
+            android:authorities="com.example.nightmare"
+            android:exported="true" />
     </application>
 
 </manifest>

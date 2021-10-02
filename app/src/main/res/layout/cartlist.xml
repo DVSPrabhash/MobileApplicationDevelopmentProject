@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orderSummary"
+        android:text="Drink Name"
+        android:textStyle="bold"
+        android:id="@+id/phoneNameinOrderSummary"
+        android:layout_marginLeft="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orderSummary"
+        android:layout_toRightOf="@+id/phoneNameinOrderSummary"
+        android:text="x"
+        android:textStyle="bold"
+        android:id="@+id/quantityinOrderSummary"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/hasBackcover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNameinOrderSummary"
+
+        android:layout_marginLeft="20dp"
+        android:text="has backcover"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/hasTemperd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNameinOrderSummary"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/hasBackcover"
+        android:text="has temperd"
+        android:textStyle="italic" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="$10"
+        android:id="@+id/priceinOrderSummary"
+        android:layout_marginRight="10dp"/>
+
+
+
+</RelativeLayout>

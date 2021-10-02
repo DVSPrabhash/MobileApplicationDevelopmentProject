@@ -68,4 +68,9 @@ public class home extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openProducts(View view){
+        Intent intent = new Intent(this,MainTharushaActivity.class);
+        startActivity(intent);
+    }
+
 }

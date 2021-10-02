@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
 
+
 <!--    Anuka Starts here-->
 
     <color name="btnAdd">#232FB1</color>
@@ -20,6 +21,12 @@
 
     <!--<color name="purple_500">#DF671E1E</color> -->
 
+
+
+    <!--    Tharusha Starts here-->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
 
 
 </resources>

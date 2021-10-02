@@ -95,4 +95,70 @@
 
     <!--    Anuka Ends here-->
 
+    <!--    tharusha start here-->
+
+    <string name="iphone12">Super Retina XDR display
+                            5.4‑inch (diagonal) all‑screen OLED display
+                            2340‑by‑1080-pixel resolution at 476 ppi
+                            The iPhone 12 mini display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.
+                            When measured as a standard rectangular shape, the screen is 5.42 inches diagonally (actual viewable area is less).
+    </string>
+
+
+    <string name="iphone10">he iPhone X display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.
+                            When measured as a standard rectangular shape, the screen is 5.85 inches diagonally (actual viewable area is less)..
+    </string>
+
+
+    <string name="mi10pro">Xiaomi Mi 10 Pro mobile was launched on 13th February 2020.
+                            The phone comes with a 6.67-inch touchscreen display with a resolution of 1080x2340 pixels.
+                            Xiaomi Mi 10 Pro is powered by a 2.84GHz octa-core Qualcomm Snapdragon 865 processor. It comes with 12GB of RAM.
+                            The Xiaomi Mi 10 Pro runs Android 10 and is powered by a 4500mAh non-removable battery.
+    </string>
+
+
+    <string name="oppo11">Oppo F11 Pro is among the few smartphones to sport a pop-up selfie camera.
+                                The Oppo F11 Pro sports a big 6.5-inch display and claims a 90.9 percent screen-to-body ratio.
+                                The F11 Pro has very thin bezels around the smartphone. The phone is slightly bulky at 191g and is heavier than average.
+                                It packs in  a 4,000mAh battery and has support for 20W fast charging .
+    </string>
+
+
+    <string name="nokiamac">Nokia McLaren Plus 2021: 16GB RAM, Triple 108MP Cameras, 8900mAh Battery with also more features!
+                            Dear smartphone lover’s today we are sharing with you about a Nokia Upcoming smartphone a new monster named Nokia McLaren Plus 2021.
+                            The company authority added the latest Technology to this Phone.
+    </string>
+
+
+    <string name="apple7">Apple iPhone 7 Plus mobile was launched in September 2016.
+                            The phone comes with a 5.50-inch touchscreen display with a resolution of 1080x1920 pixels at a pixel density of 401 pixels per inch (ppi).
+                            Apple iPhone 7 Plus is powered by a quad-core Apple A10 Fusion processor. I
+                            t comes with 3GB of RAM. The Apple iPhone 7 Plus runs iOS 10 and is powered by a 2900mAh non-removable battery
+    </string>
+
+
+    <string name="samsungm21">The Samsung Galaxy is yet another smartphone to join the Galaxy M series.
+                        It brings some of the key features that the Galaxy M series is known for.
+                        The smartphone packs in a 6.4-inch AMOLED display that isn’t very common at this price point.
+                        It has a vivid output and very good viewing angles.
+    </string>
+
+
+    <string name="samsungno10">Samsung Galaxy Note 10 mobile was launched on 7th August 2019.
+                                The phone comes with a 6.30-inch touchscreen display with a resolution of 1080x2280 pixels at a pixel density of 401 pixels per inch (ppi) and an aspect ratio of 19:9.
+                                Samsung Galaxy Note 10 is powered by a 1.9GHz octa-core
+    </string>
+
+
+    <string name="galaxys9">The Samsung Galaxy S9 features a metal and glass design, with tapering edges on both sides.
+                            It has a 5.8-inch Quad HD+ Super AMOLED display with an 18.5:9 aspect ratio. Touch response and colours are superb and it also supports HDR.
+                            In India, the phone uses an Exynos 9810 octa-core SoC and comes with 4GB of RAM a choice of 64GB or 256GB internal storage, which is expandable.
+    </string>
+    <string name="back_cover">Back cover Rs.400</string>
+    <string name="temperd_glass">Add Temperd Glass Rs.700</string>
+    <string name="price">Rs.XXXX/=</string>
+    <string name="black">Black</string>
+    <string name="blue">Dark Blue</string>
+    <string name="phonename">Phone Name</string>
+
 </resources>

@@ -11,27 +11,43 @@
         android:theme="@style/Theme.NightMare">
         <activity
             android:name=".xiomi10Activity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".samsungs9Activity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".samsungnote10Activity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".samsungm21Activity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".oppof12Activity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".nokiamacActivity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".iphonexActivity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".iphone7Activity"
+            android:parentActivityName=".MainTharushaActivity"
+            android:label="Device Details"
             android:exported="true" />
         <activity
             android:name=".SummaryActivity"
@@ -47,7 +63,8 @@
             android:name=".InfoActivity"
             android:exported="true"
             android:parentActivityName=".MainTharushaActivity"
-            android:label="Device Details"/>
+            android:label="Device Details"
+            />
         <activity
             android:name=".adminHome"
             android:exported="true"

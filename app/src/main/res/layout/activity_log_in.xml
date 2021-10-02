@@ -47,20 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signIn" />
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="280dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/username"
-        android:inputType="textPersonName"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
-
     <TextView
         android:id="@+id/signInPassword"
         android:layout_width="wrap_content"
@@ -75,27 +61,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="280dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/passwordText"
-        android:inputType="textPassword"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInPassword" />
-
     <Button
         android:id="@+id/btn_signIn"
         android:layout_width="238dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="51dp"
         android:background="@drawable/custom_btn"
         android:text="@string/btn_signIn"
         android:textAllCaps="false"
@@ -111,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="34dp"
         android:text="@string/signInPageText"
         android:textColor="#E91E63"
         android:textSize="16sp"
@@ -124,13 +96,48 @@
         android:layout_height="40dp"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/custom_btn2"
         android:text="@string/btn_signUp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:backgroundTint="@color/teal_200"
-        app:layout_constraintBaseline_toBaselineOf="@+id/signInPageText"
-        app:layout_constraintStart_toEndOf="@+id/signInPageText" />
+        app:layout_constraintStart_toEndOf="@+id/signInPageText"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signIn" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#1703A9F4"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="#79000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#1703A9F4"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="#79000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,9 +32,11 @@
             android:exported="true" />
         <activity
             android:name=".logIn"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".register"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

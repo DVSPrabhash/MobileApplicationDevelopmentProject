@@ -48,6 +48,7 @@
         android:layout_marginStart="137dp"
         android:layout_marginLeft="137dp"
         android:layout_marginTop="52dp"
+        android:onClick="openAddDevice"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_home3" />

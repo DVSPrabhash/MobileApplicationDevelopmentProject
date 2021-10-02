@@ -54,4 +54,9 @@ public class home extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openAddDevice(View view){
+        Intent intent = new Intent(this,MainHimashaActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -64,7 +64,7 @@
     <string name="btn_updateCardDetails">update my card details</string>
 
 
-<!--    Anuka Starts here-->
+    <!--    Anuka Starts here-->
     <string name="etUserName">Enter User Name</string>
     <string name="etUserPassword">Enter Your Password</string>
     <string name="btnUserLogIn">Log In</string>

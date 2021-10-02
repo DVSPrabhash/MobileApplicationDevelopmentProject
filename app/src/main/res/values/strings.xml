@@ -81,6 +81,16 @@
     <string name="tvUsername">Username</string>
     <string name="btn_home3">Sell Device</string>
     <string name="btn_home5">User Sellings</string>
+    <string name="tv_text1">MOBILE BRAND</string>
+    <string name="tv_text2">MOBILE MODEL</string>
+    <string name="tv_text3">CONDITION</string>
+    <string name="tv_text4">PRICE</string>
+    <string name="tv_text5">DESCRIPTION</string>
+    <string name="tv_textUp1">MOBILE BRAND</string>
+    <string name="tv_textUp2">MOBILE MODEL</string>
+    <string name="tv_textUp3">CONDITION</string>
+    <string name="tv_textUp4">PRICE</string>
+    <string name="tv_textUp5">DESCRIPTION</string>
 
 
     <!--    Anuka Ends here-->

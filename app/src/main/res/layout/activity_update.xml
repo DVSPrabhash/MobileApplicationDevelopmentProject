@@ -4,107 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity"
-    android:background="@drawable/login">
+    android:background="@drawable/register"
+    tools:context=".AddActivity">
 
     <EditText
         android:id="@+id/brand_input2"
         android:layout_width="295dp"
         android:layout_height="46dp"
-        android:layout_marginTop="150dp"
-        android:background="#A4EFB990"
+        android:layout_marginTop="2dp"
+        android:background="#C0D6E1"
         android:ems="10"
         android:hint="Mobile Brand"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_textUp1" />
 
     <EditText
         android:id="@+id/model_input2"
-        android:layout_width="301dp"
+        android:layout_width="295dp"
         android:layout_height="46dp"
-        android:layout_marginTop="35dp"
-        android:background="#A4EFB990"
+        android:layout_marginTop="2dp"
+        android:background="#C0D6E1"
         android:ems="10"
         android:hint="Mobile Model"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/brand_input2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_textUp2" />
 
     <EditText
         android:id="@+id/condition_input2"
-        android:layout_width="301dp"
+        android:layout_width="295dp"
         android:layout_height="46dp"
-        android:layout_marginTop="35dp"
-        android:background="#A4EFB990"
+        android:layout_marginTop="2dp"
+        android:background="#C0D6E1"
         android:ems="10"
         android:hint="Condition"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/model_input2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_textUp3" />
 
     <EditText
         android:id="@+id/price_input2"
-        android:layout_width="305dp"
+        android:layout_width="295dp"
         android:layout_height="46dp"
-        android:layout_marginTop="35dp"
-        android:background="#A4EFB990"
+        android:layout_marginTop="2dp"
+        android:background="#C0D6E1"
         android:ems="10"
         android:hint="Price"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/condition_input2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_textUp4" />
 
     <EditText
         android:id="@+id/description_input2"
-        android:layout_width="309dp"
+        android:layout_width="295dp"
         android:layout_height="46dp"
-        android:layout_marginTop="35dp"
-        android:background="#A4EFB990"
+        android:layout_marginTop="2dp"
+        android:background="#C0D6E1"
         android:ems="10"
         android:hint="Description"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_input2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_textUp5" />
 
     <Button
         android:id="@+id/update_button"
-        android:layout_width="355dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
         android:text="Update"
         android:textAllCaps="false"
+        android:textColor="@color/purple_500"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:backgroundTint="#DF671E1E"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="#2AF598"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description_input2" />
 
     <Button
         android:id="@+id/delete_button"
-        android:layout_width="355dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:text="Delete"
         android:textAllCaps="false"
-        android:textColor="#F80B0B"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:backgroundTint="#DF671E1E"
-        app:layout_constraintStart_toStartOf="@+id/update_button"
-        app:layout_constraintTop_toBottomOf="@+id/update_button" />
+        app:backgroundTint="#B5F80B0B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/update_button"
+        app:layout_constraintTop_toTopOf="@+id/update_button" />
+
+    <TextView
+        android:id="@+id/tv_textUp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/tv_textUp1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_textUp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_textUp2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brand_input2" />
+
+    <TextView
+        android:id="@+id/tv_textUp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_textUp3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/model_input2" />
+
+    <TextView
+        android:id="@+id/tv_textUp4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_textUp4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_input2" />
+
+    <TextView
+        android:id="@+id/tv_textUp5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_textUp5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_input2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

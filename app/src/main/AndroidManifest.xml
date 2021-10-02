@@ -9,35 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NightMare">
-        <activity android:name=".UpdateActivity"
-            android:parentActivityName=".MainHimashaActivity"/>
+        <activity
+            android:name=".adminHome"
+            android:label="Admin Panel"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateActivity"
+            android:parentActivityName=".MainHimashaActivity" />
         <activity
             android:name=".AddActivity"
             android:label="Add Device"
             android:parentActivityName=".MainHimashaActivity" />
         <activity
             android:name=".MainHimashaActivity"
-            android:label="Devices Library"/>
+            android:parentActivityName = ".home"
+            android:label="Devices Library" />
         <activity
             android:name=".AdminInterfaceIt20149994Activity"
+            android:parentActivityName = ".home"
+            android:label="View All Devices"
             android:exported="true" />
         <activity
             android:name=".UserInterfaceIt20149994Activity"
+            android:parentActivityName = ".home"
+            android:label="Sell My Devices"
             android:exported="true" />
         <activity
             android:name=".home"
+            android:label="Home"
             android:exported="true" />
         <activity
             android:name=".addMyCard"
+            android:parentActivityName = ".home"
+            android:label="@string/addMyCardDetails"
             android:exported="true" />
         <activity
             android:name=".logIn"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".register"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

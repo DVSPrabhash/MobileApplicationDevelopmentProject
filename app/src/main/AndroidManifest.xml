@@ -79,12 +79,12 @@
         <activity
             android:name=".MainHimashaActivity"
             android:label="Devices Library"
-            android:parentActivityName=".home" />
+            android:parentActivityName=".adminHome" />
         <activity
             android:name=".AdminInterfaceIt20149994Activity"
             android:exported="true"
             android:label="View All Devices"
-            android:parentActivityName=".home" />
+            android:parentActivityName=".adminHome" />
         <activity
             android:name=".UserInterfaceIt20149994Activity"
             android:exported="true"

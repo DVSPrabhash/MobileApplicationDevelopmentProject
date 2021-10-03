@@ -79,8 +79,8 @@
     <string name="btnDelete">Delete</string>
     <string name="btnAdminLogin">Admin Login</string>
     <string name="tvUsername">Username</string>
-    <string name="btn_home3">Sell Device</string>
-    <string name="btn_home5">User Sellings</string>
+    <string name="btn_home3">sell device</string>
+    <string name="btn_home5">user sellings</string>
     <string name="tv_text1">MOBILE BRAND</string>
     <string name="tv_text2">MOBILE MODEL</string>
     <string name="tv_text3">CONDITION</string>
@@ -162,5 +162,7 @@
     <string name="phonename">Phone Name</string>
     <string name="btn_home1">save my card</string>
     <string name="btn_home2">buy product</string>
+    <string name="btn_logout">log out</string>
+    <string name="btn_home4">add device</string>
 
 </resources>

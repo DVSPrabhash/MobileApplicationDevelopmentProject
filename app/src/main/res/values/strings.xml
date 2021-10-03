@@ -160,5 +160,7 @@
     <string name="black">Black</string>
     <string name="blue">Dark Blue</string>
     <string name="phonename">Phone Name</string>
+    <string name="btn_home1">save my card</string>
+    <string name="btn_home2">buy product</string>
 
 </resources>

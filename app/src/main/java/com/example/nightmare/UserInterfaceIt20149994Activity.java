@@ -116,7 +116,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
 
     }
 
-    public void deletePhone(View view){
+  /*  public void deletePhone(View view){
         DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
         String deviceID = etDeviceID.getText().toString();
 
@@ -132,9 +132,9 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
             etPrice.setText("");
             etSpecialNotes.setText("");
         }
-    }
+    }*/
 
-    public void updatePhone(View view){
+    /*public void updatePhone(View view){
         DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
         String deviceName = etDeviceName.getText().toString();
         String manufacturer = etManufacturer.getText().toString();
@@ -153,6 +153,89 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
             etPrice.setText("");
             etSpecialNotes.setText("");
         }
+    }*/
+
+
+
+    public void deletePhone(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Delete this device?");
+        builder.setMessage("Are you sure want to delete this device ?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                DBHelperIT20149994 dbHelper = new DBHelperIT20149994(UserInterfaceIt20149994Activity.this);
+                String deviceID = etDeviceID.getText().toString();
+
+                if(deviceID.isEmpty()){
+                    Toast.makeText(UserInterfaceIt20149994Activity.this,"Select a phone",Toast.LENGTH_SHORT).show();
+                }else{
+                    dbHelper.deleteInfo(deviceID);
+                    Toast.makeText(UserInterfaceIt20149994Activity.this,"Successfully deleted", Toast.LENGTH_SHORT).show();
+
+                    etDeviceName.setText("");
+                    etManufacturer.setText("");
+                    etYear.setText("");
+                    etPrice.setText("");
+                    etSpecialNotes.setText("");
+                }
+
+
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+
+            }
+        });
+        builder.create().show();
+    }
+
+
+    //update phone
+    public void updatePhone(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Update this device?");
+        builder.setMessage("Are you sure want to update this device ?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                DBHelperIT20149994 dbHelper = new DBHelperIT20149994(UserInterfaceIt20149994Activity.this);
+                String deviceName = etDeviceName.getText().toString();
+                String manufacturer = etManufacturer.getText().toString();
+                String year = etYear.getText().toString();
+                String price = etPrice.getText().toString();
+                String specialNotes = etSpecialNotes.getText().toString();
+                String deviceID = etDeviceID.getText().toString();
+
+                if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
+                    Toast.makeText(UserInterfaceIt20149994Activity.this, "Enter Values", Toast.LENGTH_SHORT).show();
+                }else{
+                    dbHelper.updateInfo(view, deviceName, manufacturer, year, price, specialNotes, deviceID);
+                    etDeviceName.setText("");
+                    etManufacturer.setText("");
+                    etYear.setText("");
+                    etPrice.setText("");
+                    etSpecialNotes.setText("");
+                }
+
+
+
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+
+            }
+        });
+        builder.create().show();
     }
 
 

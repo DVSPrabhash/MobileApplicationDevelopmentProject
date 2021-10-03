@@ -9,13 +9,15 @@
 
     <Button
         android:id="@+id/btn_home1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
         android:layout_marginStart="156dp"
         android:layout_marginLeft="156dp"
         android:layout_marginTop="92dp"
+        android:drawableBottom="@drawable/custom_btn2"
         android:onClick="openWallet"
-        android:text="Button"
+        android:text="@string/btn_home1"
+        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +29,9 @@
         android:layout_marginLeft="128dp"
         android:layout_marginTop="67dp"
         android:onClick="openProducts"
-        android:text="Button"
+        android:text="@string/btn_home2"
+        android:drawableBottom="@drawable/custom_btn2"
+        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_home1" />
 
@@ -39,6 +43,8 @@
         android:layout_marginLeft="128dp"
         android:layout_marginTop="68dp"
         android:onClick="logInUser"
+        android:textAllCaps="false"
+        android:drawableBottom="@drawable/custom_btn2"
         android:text="@string/btn_home3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_home2" />
@@ -65,6 +71,8 @@
         android:layout_marginTop="128dp"
         android:onClick="logout"
         android:text="Button"
+        android:textAllCaps="false"
+        android:drawableBottom="@drawable/custom_btn2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.788"
         app:layout_constraintStart_toStartOf="parent"

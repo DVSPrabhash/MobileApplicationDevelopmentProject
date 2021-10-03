@@ -51,25 +51,31 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
         String specialNotes = etSpecialNotes.getText().toString();
         String username = etusername.getText().toString();
 
-        DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
+        boolean validation = validateInfo(year, price);
 
-        if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
-            Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
-        }else{
-            long inserted = dbHelper.addInfo(deviceName,manufacturer,year,price,specialNotes,username);
+        if(validation){
 
-            if(inserted>0){
-                Toast.makeText(this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+            DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
 
-                etDeviceName.setText("");
-                etManufacturer.setText("");
-                etYear.setText("");
-                etPrice.setText("");
-                etSpecialNotes.setText("");
-
+            if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
+                Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                long inserted = dbHelper.addInfo(deviceName,manufacturer,year,price,specialNotes,username);
+
+                if(inserted>0){
+                    Toast.makeText(this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
+
+                    etDeviceName.setText("");
+                    etManufacturer.setText("");
+                    etYear.setText("");
+                    etPrice.setText("");
+                    etSpecialNotes.setText("");
+
+                }else{
+                    Toast.makeText(this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                }
             }
+
         }
     }
 
@@ -212,19 +218,22 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
                 String specialNotes = etSpecialNotes.getText().toString();
                 String deviceID = etDeviceID.getText().toString();
 
-                if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
-                    Toast.makeText(UserInterfaceIt20149994Activity.this, "Enter Values", Toast.LENGTH_SHORT).show();
-                }else{
-                    dbHelper.updateInfo(view, deviceName, manufacturer, year, price, specialNotes, deviceID);
-                    etDeviceName.setText("");
-                    etManufacturer.setText("");
-                    etYear.setText("");
-                    etPrice.setText("");
-                    etSpecialNotes.setText("");
+                boolean validation = validateInfo(year, price);
+
+                if(validation){
+
+                    if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
+                        Toast.makeText(UserInterfaceIt20149994Activity.this, "Enter Values", Toast.LENGTH_SHORT).show();
+                    }else{
+                        dbHelper.updateInfo(view, deviceName, manufacturer, year, price, specialNotes, deviceID);
+                        etDeviceName.setText("");
+                        etManufacturer.setText("");
+                        etYear.setText("");
+                        etPrice.setText("");
+                        etSpecialNotes.setText("");
+                    }
+
                 }
-
-
-
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -236,6 +245,36 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
             }
         });
         builder.create().show();
+    }
+
+    private Boolean validateInfo(String year, String price){
+        int yearInt = Integer.parseInt(year);
+        int priceInt = Integer.parseInt(price);
+        if(yearInt<2005){
+            etYear.requestFocus();
+            etYear.setError("Year must be greater than 2005");
+            return false;
+        }
+        else if(yearInt>2022){
+            etYear.requestFocus();
+            etYear.setError("Please enter the correct year");
+            return false;
+        }
+        else if(priceInt<1000){
+            etPrice.requestFocus();
+            etPrice.setError("Price can not be less than Rs.1000");
+            return false;
+        }
+        else if(priceInt>500000){
+            etPrice.requestFocus();
+            etPrice.setError("Price can not be greater than Rs.500,000");
+            return false;
+        }
+
+        else{
+            return true;
+        }
+
     }
 
 

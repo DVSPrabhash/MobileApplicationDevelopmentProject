@@ -122,46 +122,6 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
 
     }
 
-  /*  public void deletePhone(View view){
-        DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
-        String deviceID = etDeviceID.getText().toString();
-
-        if(deviceID.isEmpty()){
-            Toast.makeText(this,"Select a phone",Toast.LENGTH_SHORT).show();
-        }else{
-            dbHelper.deleteInfo(deviceID);
-            Toast.makeText(this,"Successfully deleted", Toast.LENGTH_SHORT).show();
-
-            etDeviceName.setText("");
-            etManufacturer.setText("");
-            etYear.setText("");
-            etPrice.setText("");
-            etSpecialNotes.setText("");
-        }
-    }*/
-
-    /*public void updatePhone(View view){
-        DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
-        String deviceName = etDeviceName.getText().toString();
-        String manufacturer = etManufacturer.getText().toString();
-        String year = etYear.getText().toString();
-        String price = etPrice.getText().toString();
-        String specialNotes = etSpecialNotes.getText().toString();
-        String deviceID = etDeviceID.getText().toString();
-
-        if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
-            Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
-        }else{
-            dbHelper.updateInfo(view, deviceName, manufacturer, year, price, specialNotes, deviceID);
-            etDeviceName.setText("");
-            etManufacturer.setText("");
-            etYear.setText("");
-            etPrice.setText("");
-            etSpecialNotes.setText("");
-        }
-    }*/
-
-
 
     public void deletePhone(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -274,8 +234,5 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
         else{
             return true;
         }
-
     }
-
-
 }

@@ -73,7 +73,7 @@
     <string name="tvYear">Year</string>
     <string name="tvPrice">Price (Rs.)</string>
     <string name="tvSpecialNotes">Special Notes</string>
-    <string name="btnDisplayAll">Display All</string>
+    <string name="btnDisplayAll">Previously Added Devices</string>
     <string name="btnAdd">Add</string>
     <string name="btnUpdate">Update</string>
     <string name="btnDelete">Delete</string>
@@ -164,5 +164,10 @@
     <string name="btn_home2">buy product</string>
     <string name="btn_logout">log out</string>
     <string name="btn_home4">add device</string>
+    <string name="etDeviceName">Enter your device name here</string>
+    <string name="etManufacturer">Example : Samsung/Apple/Huawei</string>
+    <string name="etYear">Your device\'s manufactured year</string>
+    <string name="etPrice">Enter the price you wish to sell</string>
+    <string name="etSpecialNotes">Enter your special notes here</string>
 
 </resources>

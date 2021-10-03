@@ -45,7 +45,8 @@ public class logIn extends AppCompatActivity {
                     Boolean result = myDB.checkusernamePassword(user,pwd);
                     if(result == true){
 
-                        if(user.equals("admin") && pwd.equals("admin")){
+                        //admin validation
+                        if(user.equals("admin") && pwd.equals("admin123")){
                             Toast.makeText(logIn.this, "Login Success", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(),adminHome.class);
                             intent.putExtra(EXTRA_USERNAME, user);
@@ -57,15 +58,12 @@ public class logIn extends AppCompatActivity {
                             intent.putExtra(EXTRA_USERNAME, user);
                             startActivity(intent);
                         }
-
-
                     }else{
                         Toast.makeText(logIn.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
-
 
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,10 +73,4 @@ public class logIn extends AppCompatActivity {
             }
         });
     }
-
-
-
-
-
-
 }

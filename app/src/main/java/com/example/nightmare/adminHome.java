@@ -21,9 +21,6 @@ public class adminHome extends AppCompatActivity {
         btn_home4 = (Button) findViewById(R.id.btn_home4);
         btn_home5 = (Button) findViewById(R.id.btn_home5);
         btn_logout = (Button) findViewById(R.id.btn_logout);
-
-
-
     }
 
     public void logInAdmin(View view) {

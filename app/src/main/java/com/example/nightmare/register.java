@@ -40,34 +40,40 @@ public class register extends AppCompatActivity {
                 String mail = email.getText().toString();
                 String phone = phoneNo.getText().toString();
 
-                //check all details fill or not by user register
-                if (user.equals("") || pass.equals("") ||repass.equals("") || phone.equals("") || mail.equals("")){
-                    Toast.makeText(register.this, "Fill All Details", Toast.LENGTH_SHORT).show();
-                }else{
-                    //check if password and confirm password are matched
-                    if(pass.equals(repass)){
-                        Boolean usercheckResult = myDB.checkusername(user);
-                        if(usercheckResult == false){
-                            Boolean regResult = myDB.insertData(user, pass, phone, mail);//insert user data in the database
+                boolean validation = validatePassword(pass);
+                if (validation){
+                    //check all details fill or not by user register
+                    if (user.equals("") || pass.equals("") ||repass.equals("") || phone.equals("") || mail.equals("")){
+                        Toast.makeText(register.this, "Fill All Details", Toast.LENGTH_SHORT).show();
+                    }else{
+                        //check if password and confirm password are matched
+                        if(pass.equals(repass)){
+                            Boolean usercheckResult = myDB.checkusername(user);
+                            if(usercheckResult == false){
+                                Boolean regResult = myDB.insertData(user, pass, phone, mail);//insert user data in the database
 
-                            if (regResult == true){
-                                Toast.makeText(register.this, "User Registration Successfully", Toast.LENGTH_SHORT).show();
+                                if (regResult == true){
+                                    Toast.makeText(register.this, "User Registration Successfully", Toast.LENGTH_SHORT).show();
 
-                                //return user to login page
-                                Intent intent = new Intent(getApplicationContext(),logIn.class);
-                                startActivity(intent);
+                                    //return user to login page
+                                    Intent intent = new Intent(getApplicationContext(),logIn.class);
+                                    startActivity(intent);
+                                }else{
+                                    Toast.makeText(register.this, "Register Fail", Toast.LENGTH_SHORT).show();
+                                }
+
                             }else{
-                                Toast.makeText(register.this, "Register Fail", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(register.this, "User already exist\n Please Sign in", Toast.LENGTH_SHORT).show();
                             }
 
                         }else{
-                            Toast.makeText(register.this, "User already exist\n Please Sign in", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(register.this,"Password not match", Toast.LENGTH_SHORT).show();
                         }
-
-                    }else{
-                        Toast.makeText(register.this,"Password not match", Toast.LENGTH_SHORT).show();
                     }
+
                 }
+
+
             }
         });
 
@@ -80,4 +86,23 @@ public class register extends AppCompatActivity {
             }
         });
     }
+
+    //validation
+    private Boolean validatePassword(String pwd){
+        if (pwd.length()<8){
+            password.requestFocus();
+            password.setError("Password must be greater than 8 characters");
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
+
+
+
+
+
+
 }

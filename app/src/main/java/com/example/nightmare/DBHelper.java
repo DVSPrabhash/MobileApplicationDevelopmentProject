@@ -157,12 +157,17 @@ import java.util.List;
 
 
         //delete function
-        public void deleteInfo(String cardNo){
+        public void deleteInfo(String cardNo, View view){
             SQLiteDatabase db = getReadableDatabase();
 
             String selection = Login.Payment.COLUMN_NAME_CARDNO + " LIKE ?";
             String[] StringArgs = {cardNo};
             db.delete(Login.Payment.TABLE_NAME,selection,StringArgs);
+
+            Snackbar snackbar = Snackbar.make(view, " card details delete successful!", Snackbar.LENGTH_LONG);
+            snackbar.setAnimationMode(snackbar.ANIMATION_MODE_SLIDE);
+            snackbar.show();
+
         }
 
 
@@ -180,14 +185,14 @@ import java.util.List;
             String selection = Login.Payment.COLUMN_NAME_CARDHOLDER + " LIKE ?";
             String[] selectionArgs = {cardHolder};
 
-            int count = myDB.update(
+           /* int count = myDB.update(
                     Login.Payment.TABLE_NAME,
                     values,
                     selection,
                     selectionArgs
-            );
+            );*/
 
-            Snackbar snackbar = Snackbar.make(view, count+ " rows were affected!", Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(view, " card details update successful!", Snackbar.LENGTH_LONG);
             snackbar.setAnimationMode(snackbar.ANIMATION_MODE_SLIDE);
             snackbar.show();
         }

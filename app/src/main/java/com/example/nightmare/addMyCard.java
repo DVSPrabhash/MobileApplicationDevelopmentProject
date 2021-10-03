@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 public class addMyCard extends AppCompatActivity {
@@ -47,7 +49,10 @@ public class addMyCard extends AppCompatActivity {
                     Toast.makeText(addMyCard.this, "Fill all Details", Toast.LENGTH_SHORT).show();
                 }else{
                     myDB.addCardDetails(cardNo, cardHolderName, expireDate, cvvCode);//get filled values from editText and store those in the database
-                    Toast.makeText(addMyCard.this, "Your Card Details Saved", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(addMyCard.this, "Your Card Details Saved", Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar.make(view, " your card details saved successful!", Snackbar.LENGTH_LONG);
+                    snackbar.setAnimationMode(snackbar.ANIMATION_MODE_SLIDE);
+                    snackbar.show();
                     cardNoText.setText("");
                     cardHolderNameText.setText("");
                     monthYearText.setText("");
@@ -139,8 +144,8 @@ public class addMyCard extends AppCompatActivity {
                     Toast.makeText(addMyCard.this,"Select a Card", Toast.LENGTH_SHORT).show();
 
                 }else{
-                    dbHelper.deleteInfo(cardNo);
-                    Toast.makeText(addMyCard.this, cardNo+ "Card Details Deleted", Toast.LENGTH_SHORT).show();
+                    dbHelper.deleteInfo(cardNo, view);
+                   // Toast.makeText(addMyCard.this, cardNo+ "Card Details Deleted", Toast.LENGTH_SHORT).show();
                     cardNoText.setText("");
                     cardHolderNameText.setText("");
                     monthYearText.setText("");
@@ -212,7 +217,7 @@ public class addMyCard extends AppCompatActivity {
                     cardHolderNameText.setText("");
                     monthYearText.setText("");
                     cvv.setText("");
-                    Toast.makeText(addMyCard.this,"Your card details updated",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(addMyCard.this,"Your card details updated",Toast.LENGTH_SHORT).show();
                 }
 
 

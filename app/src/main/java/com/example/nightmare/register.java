@@ -40,7 +40,7 @@ public class register extends AppCompatActivity {
                 String mail = email.getText().toString();
                 String phone = phoneNo.getText().toString();
 
-                boolean validation = validatePassword(pass, mail, phone);
+                boolean validation = validateRegister(pass, mail, phone);
                 if (validation){
                     //check all details fill or not by user register
                     if (user.equals("") || pass.equals("") ||repass.equals("") || phone.equals("") || mail.equals("")){
@@ -88,7 +88,7 @@ public class register extends AppCompatActivity {
     }
 
     //validation
-    private Boolean validatePassword(String pwd, String mail, String pNo){
+    private Boolean validateRegister(String pwd, String mail, String pNo){
         if (pwd.length()<8){
             password.requestFocus();
             password.setError("Password must be greater than 8 characters");

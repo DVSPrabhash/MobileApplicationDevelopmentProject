@@ -45,28 +45,37 @@ public class addMyCard extends AppCompatActivity {
                 String expireDate = monthYearText.getText().toString();
                 String cvvCode = cvv.getText().toString();
 
-                if (cardNo.equals("") ||cardHolderName.equals("") || expireDate.equals("")||cvvCode.equals("")){
-                    Toast.makeText(addMyCard.this, "Fill all Details", Toast.LENGTH_SHORT).show();
-                }else{
-                    myDB.addCardDetails(cardNo, cardHolderName, expireDate, cvvCode);//get filled values from editText and store those in the database
-                    //Toast.makeText(addMyCard.this, "Your Card Details Saved", Toast.LENGTH_SHORT).show();
-                    Snackbar snackbar = Snackbar.make(view, " your card details saved successful!", Snackbar.LENGTH_LONG);
-                    snackbar.setAnimationMode(snackbar.ANIMATION_MODE_SLIDE);
-                    snackbar.show();
-                    cardNoText.setText("");
-                    cardHolderNameText.setText("");
-                    monthYearText.setText("");
-                    cvv.setText("");
+                Boolean validation = validateCardDetails(cardNo, expireDate, cvvCode);
+                if (validation){
+                    if (cardNo.equals("") ||cardHolderName.equals("") || expireDate.equals("")||cvvCode.equals("")){
+                        Toast.makeText(addMyCard.this, "Fill all Details", Toast.LENGTH_SHORT).show();
+                    }else{
+                        myDB.addCardDetails(cardNo, cardHolderName, expireDate, cvvCode);//get filled values from editText and store those in the database
+                        //Toast.makeText(addMyCard.this, "Your Card Details Saved", Toast.LENGTH_SHORT).show();
+                        Snackbar snackbar = Snackbar.make(view, " your card details saved successful!", Snackbar.LENGTH_LONG);
+                        snackbar.setAnimationMode(snackbar.ANIMATION_MODE_SLIDE);
+                        snackbar.show();
+                        cardNoText.setText("");
+                        cardHolderNameText.setText("");
+                        monthYearText.setText("");
+                        cvv.setText("");
 
 
 
 
 
+
+
+
+
+                    }
 
 
 
 
                 }
+
+
             }
         });
     }
@@ -236,6 +245,29 @@ public class addMyCard extends AppCompatActivity {
         builder.create().show();
     }
 
+
+    //validation
+    private Boolean validateCardDetails(String cardNo, String date, String pcvv){
+        if (cardNo.length() != 16){
+            cardNoText.requestFocus();
+            cardNoText.setError("invalid card number");
+            return false;
+        }
+        else if (!date.matches("[0-1][0-9]+/[0-2][0-9]+")){
+            monthYearText.requestFocus();
+            monthYearText.setError("invalid expire date");
+            return false;
+        }
+        else if (!pcvv.matches("[0-9]{3}")){
+            cvv.requestFocus();
+            cvv.setError("invalid cvv");
+            return false;
+        }
+        else{
+            return true;
+        }
+
+    }
 
 
 

@@ -47,7 +47,7 @@ public class samsungm21Activity extends AppCompatActivity implements LoaderManag
         addtoCart = findViewById(R.id.addtocart);
         addtemperd = findViewById(R.id.addTemperdGlass);
 
-        // setting the name of drink
+        // setting the name of phone
 
         phoneName.setText("Samsung galaxy m21");
         imageView.setImageResource(R.drawable.m21);

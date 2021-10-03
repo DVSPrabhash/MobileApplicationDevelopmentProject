@@ -72,8 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/firstCardView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
         app:cardBackgroundColor="#D0CDCD"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">

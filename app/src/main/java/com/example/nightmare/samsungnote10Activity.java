@@ -47,7 +47,7 @@ public class samsungnote10Activity extends AppCompatActivity implements LoaderMa
         addtoCart = findViewById(R.id.addtocart);
         addtemperd = findViewById(R.id.addTemperdGlass);
 
-        // setting the name of drink
+        // setting the name of phone
 
         phoneName.setText("Samsung note10 ");
         imageView.setImageResource(R.drawable.samsungnote10);

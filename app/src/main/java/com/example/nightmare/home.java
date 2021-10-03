@@ -12,12 +12,9 @@ import android.widget.Toast;
 public class home extends AppCompatActivity {
     public static final String EXTRA_USERNAME = "com.example.nightmare.USERNAME";
 
-    //intialiation
+    //intialization
     Button btn_home1, btn_home2, btn_home3, btn_logout;
-            //btn_home4, btn_home5;
     EditText etusername;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +23,7 @@ public class home extends AppCompatActivity {
 
         Intent intent = getIntent();
         String username = intent.getStringExtra(logIn.EXTRA_USERNAME);
+
         etusername = findViewById(R.id.etusername);
         etusername.setText(username);
         etusername = findViewById(R.id.etusername);
@@ -34,10 +32,8 @@ public class home extends AppCompatActivity {
         btn_home2 = (Button) findViewById(R.id.btn_home2);
         btn_home3 = (Button) findViewById(R.id.btn_home3);
         btn_logout = (Button) findViewById(R.id.btn_logout);
-        //btn_home4 = (Button) findViewById(R.id.btn_home4);
-       // btn_home5 = (Button) findViewById(R.id.btn_home5);
-
     }
+
 
     public void openWallet(View view){
         Intent intent = new Intent(this,addMyCard.class);

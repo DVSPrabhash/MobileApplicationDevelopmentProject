@@ -19,7 +19,9 @@ import java.util.List;
 
 
     final class Login{
-        private Login(){}
+        private Login(){
+
+        }
 
         public static class Payment implements BaseColumns{
             public static final String TABLE_NAME = "payment";
@@ -184,13 +186,6 @@ import java.util.List;
 
             String selection = Login.Payment.COLUMN_NAME_CARDHOLDER + " LIKE ?";
             String[] selectionArgs = {cardHolder};
-
-           /* int count = myDB.update(
-                    Login.Payment.TABLE_NAME,
-                    values,
-                    selection,
-                    selectionArgs
-            );*/
 
             Snackbar snackbar = Snackbar.make(view, " card details update successful!", Snackbar.LENGTH_LONG);
             snackbar.setAnimationMode(snackbar.ANIMATION_MODE_SLIDE);

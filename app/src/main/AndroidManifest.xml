@@ -63,8 +63,7 @@
             android:name=".InfoActivity"
             android:exported="true"
             android:parentActivityName=".MainTharushaActivity"
-            android:label="Device Details"
-            />
+            android:label="Device Details" />
         <activity
             android:name=".adminHome"
             android:exported="true"
@@ -100,16 +99,13 @@
             android:label="@string/addMyCardDetails"
             android:parentActivityName=".home" />
         <activity
-            android:name=".logIn"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-
-
-
-        <activity
             android:name=".register"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".logIn"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

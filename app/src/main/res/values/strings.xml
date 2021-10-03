@@ -63,8 +63,7 @@
     <string name="btn_deleteCard">Remove MyCard</string>
     <string name="btn_updateCardDetails">update my card details</string>
 
-
-    <!--    Anuka Starts here-->
+    <!--Anuka-->
     <string name="etUserName">Enter User Name</string>
     <string name="etUserPassword">Enter Your Password</string>
     <string name="btnUserLogIn">Log In</string>
@@ -92,11 +91,7 @@
     <string name="tv_textUp4">PRICE</string>
     <string name="tv_textUp5">DESCRIPTION</string>
 
-
-    <!--    Anuka Ends here-->
-
-    <!--    tharusha start here-->
-
+    <!--tharusha-->
     <string name="iphone12">Super Retina XDR display
                             5.4‑inch (diagonal) all‑screen OLED display
                             2340‑by‑1080-pixel resolution at 476 ppi

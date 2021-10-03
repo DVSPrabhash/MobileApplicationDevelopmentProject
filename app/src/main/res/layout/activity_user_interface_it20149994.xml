@@ -14,15 +14,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:text="@string/tvDeviceName"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etDeviceName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="284dp"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:ems="10"
@@ -36,15 +39,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:text="@string/tvManufacturer"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDeviceName" />
 
     <EditText
         android:id="@+id/etManufacturer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="284dp"
+        android:layout_height="51dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:ems="10"
@@ -58,8 +64,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:text="@string/tvYear"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etManufacturer" />
 
@@ -69,8 +78,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:text="@string/tvPrice"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etYear" />
 
@@ -80,15 +92,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:text="@string/tvSpecialNotes"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPrice" />
 
     <EditText
         android:id="@+id/etSpecialNotes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="284dp"
+        android:layout_height="53dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:ems="10"
@@ -98,14 +113,19 @@
 
     <Button
         android:id="@+id/btnDisplayAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_width="231dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_btn"
         android:backgroundTint="@color/btnDisplayAll"
         android:onClick="viewAll"
         android:text="@string/btnDisplayAll"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:textSize="14sp"
+        app:backgroundTint="#2AF598"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etSpecialNotes" />
 
@@ -113,25 +133,30 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:background="@drawable/custom_btn"
         android:backgroundTint="@color/btnAdd"
         android:onClick="savePhone"
         android:text="@string/btnAdd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDisplayAll" />
+        android:textAllCaps="false"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnUpdate"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_btn"
         android:backgroundTint="@color/btnUpdate"
         android:onClick="updatePhone"
         android:text="@string/btnUpdate"
+        android:textAllCaps="false"
+        app:backgroundTint="#4CAF50"
         app:layout_constraintStart_toEndOf="@+id/btnAdd"
         app:layout_constraintTop_toBottomOf="@+id/btnDisplayAll" />
 
@@ -139,14 +164,16 @@
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/custom_btn"
         android:backgroundTint="@color/btnDelete"
         android:onClick="deletePhone"
         android:text="@string/btnDelete"
-        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
-        app:layout_constraintTop_toBottomOf="@+id/btnDisplayAll" />
+        android:textAllCaps="false"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnUpdate"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate" />
 
     <EditText
         android:id="@+id/etDeviceID"
@@ -178,8 +205,8 @@
 
     <EditText
         android:id="@+id/etYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="284dp"
+        android:layout_height="49dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:ems="10"
@@ -189,8 +216,8 @@
 
     <EditText
         android:id="@+id/etPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="284dp"
+        android:layout_height="53dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:ems="10"

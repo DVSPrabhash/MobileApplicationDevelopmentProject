@@ -38,10 +38,8 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
     }
 
     public Long addInfo(String deviceName, String manufacturer, String year, String price, String specialNotes, String username){
-        // Gets the data repository in write mode
         SQLiteDatabase db = getWritableDatabase();
 
-        // Create a new map of values, where column names the keys
         ContentValues values = new ContentValues();
         values.put(PhonesMaster.Phones.COLUMN_NAME_DEVICENAME, deviceName);
         values.put(PhonesMaster.Phones.COLUMN_NAME_MANUFACTURER, manufacturer);
@@ -50,17 +48,10 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
         values.put(PhonesMaster.Phones.COLUMN_NAME_SPECIALNOTES, specialNotes);
         values.put(PhonesMaster.Phones.COLUMN_NAME_USERNAME, username);
 
-        // Insert the new row, returning the primary key value of the new row
         return db.insert(PhonesMaster.Phones.TABLE_NAME, null, values);
     }
 
     public List readAll(String username){
-//        SQLiteDatabase db = getReadableDatabase();
-//
-//        String selection = PhonesMaster.Phones._ID + " = ?";
-//        String[] stringArgs = {deviceID};
-//
-//        db.delete(PhonesMaster.Phones.TABLE_NAME,selection,stringArgs);
 
         SQLiteDatabase db = getReadableDatabase();
 
@@ -107,12 +98,6 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
     }
 
     public List readAllAdmin(){
-//        SQLiteDatabase db = getReadableDatabase();
-//
-//        String selection = PhonesMaster.Phones._ID + " = ?";
-//        String[] stringArgs = {deviceID};
-//
-//        db.delete(PhonesMaster.Phones.TABLE_NAME,selection,stringArgs);
 
         SQLiteDatabase db = getReadableDatabase();
 

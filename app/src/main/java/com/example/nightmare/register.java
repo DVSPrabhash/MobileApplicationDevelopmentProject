@@ -70,10 +70,7 @@ public class register extends AppCompatActivity {
                             Toast.makeText(register.this,"Password not match", Toast.LENGTH_SHORT).show();
                         }
                     }
-
                 }
-
-
             }
         });
 
@@ -109,11 +106,4 @@ public class register extends AppCompatActivity {
         }
 
     }
-
-
-
-
-
-
-
 }

@@ -38,7 +38,7 @@
 
 
     <string name="addMyCardDetails">Add My Card Details</string>
-    <string name="cardNoText">Card number</string>
+    <string name="cardNoText">XXXX-XXXX-XXXX-XXXX</string>
     <string name="cardHolderNameText">Cardholder Name</string>
     <string name="monthYearText">MM/YY</string>
     <string name="cvvText">CVV</string>

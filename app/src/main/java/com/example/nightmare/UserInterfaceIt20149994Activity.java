@@ -160,7 +160,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
     public void deletePhone(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete this device?");
-        builder.setMessage("Are you sure want to delete this device ?");
+        builder.setMessage("Do you want to delete this device ?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -199,7 +199,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
     public void updatePhone(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Update this device?");
-        builder.setMessage("Are you sure want to update this device ?");
+        builder.setMessage("Do you want to update this device ?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

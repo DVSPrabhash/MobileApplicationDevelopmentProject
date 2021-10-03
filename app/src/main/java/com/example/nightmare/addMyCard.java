@@ -48,6 +48,19 @@ public class addMyCard extends AppCompatActivity {
                 }else{
                     myDB.addCardDetails(cardNo, cardHolderName, expireDate, cvvCode);//get filled values from editText and store those in the database
                     Toast.makeText(addMyCard.this, "Your Card Details Saved", Toast.LENGTH_SHORT).show();
+                    cardNoText.setText("");
+                    cardHolderNameText.setText("");
+                    monthYearText.setText("");
+                    cvv.setText("");
+
+
+
+
+
+
+
+
+
                 }
             }
         });
@@ -94,6 +107,7 @@ public class addMyCard extends AppCompatActivity {
 
 
     //delete method
+    /*
     public void deleteCard(View view){
         DBHelper dbHelper = new DBHelper(this);
 
@@ -106,10 +120,53 @@ public class addMyCard extends AppCompatActivity {
             dbHelper.deleteInfo(cardNo);
             Toast.makeText(this, cardNo+ "Card Details Deleted", Toast.LENGTH_SHORT).show();
         }
+    }*/
+
+
+    //delete method
+    public void deleteCard(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Delete saved card?");
+        builder.setMessage("Are you sure to delete your card details ?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                DBHelper dbHelper = new DBHelper(addMyCard.this);
+
+                String cardNo = cardNoText.getText().toString();
+
+                if(cardNo.isEmpty()){
+                    Toast.makeText(addMyCard.this,"Select a Card", Toast.LENGTH_SHORT).show();
+
+                }else{
+                    dbHelper.deleteInfo(cardNo);
+                    Toast.makeText(addMyCard.this, cardNo+ "Card Details Deleted", Toast.LENGTH_SHORT).show();
+                    cardNoText.setText("");
+                    cardHolderNameText.setText("");
+                    monthYearText.setText("");
+                    cvv.setText("");
+                }
+
+
+
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+
+            }
+        });
+        builder.create().show();
     }
 
 
+
+
     //update method
+    /*
     public void updateCard(View view){
         DBHelper dbHelper = new DBHelper(this);
 
@@ -130,4 +187,53 @@ public class addMyCard extends AppCompatActivity {
             Toast.makeText(this,"Your card details updated",Toast.LENGTH_SHORT).show();
         }
     }
+*/
+    //update method
+    public void updateCard(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Update saved card ?");
+        builder.setMessage("Are you sure to update card details ?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                DBHelper dbHelper = new DBHelper(addMyCard.this);
+
+                String cardNo = cardNoText.getText().toString();
+                String cardHolderName = cardHolderNameText.getText().toString();
+                String expireDate = monthYearText.getText().toString();
+                String cvvCode = cvv.getText().toString();
+
+                if(cardNo.isEmpty() || cardHolderName.isEmpty() || expireDate.isEmpty() || cvvCode.isEmpty()){
+                    Toast.makeText(addMyCard.this,"select or type your card details", Toast.LENGTH_SHORT).show();
+
+                }else{
+                    dbHelper.updateInfo(view, cardNo, cardHolderName, expireDate, cvvCode);
+                    cardNoText.setText("");
+                    cardHolderNameText.setText("");
+                    monthYearText.setText("");
+                    cvv.setText("");
+                    Toast.makeText(addMyCard.this,"Your card details updated",Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+
+
+
+
+            }
+        });
+        builder.create().show();
+    }
+
+
+
+
+
+
 }

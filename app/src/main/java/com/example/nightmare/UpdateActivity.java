@@ -35,7 +35,7 @@ public class UpdateActivity extends AppCompatActivity {
 
         ActionBar ab = getSupportActionBar();
         if (ab != null) {
-            ab.setTitle(title);
+            ab.setTitle(model);
         }
 
         update_button.setOnClickListener(view -> {

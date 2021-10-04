@@ -37,6 +37,7 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
 
     }
 
+    // Add new device
     public Long addInfo(String deviceName, String manufacturer, String year, String price, String specialNotes, String username){
         SQLiteDatabase db = getWritableDatabase();
 
@@ -51,6 +52,8 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
         return db.insert(PhonesMaster.Phones.TABLE_NAME, null, values);
     }
 
+
+    // Return all saved devices by a single user
     public List readAll(String username){
 
         SQLiteDatabase db = getReadableDatabase();
@@ -97,6 +100,7 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
         return info;
     }
 
+    // // Return all devices from all users
     public List readAllAdmin(){
 
         SQLiteDatabase db = getReadableDatabase();
@@ -143,6 +147,7 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
         return info;
     }
 
+    // Delete a device
     public void deleteInfo(String deviceID){
         SQLiteDatabase db = getReadableDatabase();
 
@@ -152,6 +157,7 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
         db.delete(PhonesMaster.Phones.TABLE_NAME,selection,stringArgs);
     }
 
+    //Update device details
     public void updateInfo(View view, String deviceName, String manufacturer, String year, String price, String specialNotes,String deviceID){
         SQLiteDatabase db = getWritableDatabase();
 
@@ -173,6 +179,8 @@ public class DBHelperIT20149994 extends SQLiteOpenHelper {
                 selectionArgs
         );
 
+
+        // Display success message using snackbar
         Snackbar snackbar = Snackbar.make(view, "Updated Successfully",Snackbar.LENGTH_LONG);
         snackbar.setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE);
         snackbar.show();

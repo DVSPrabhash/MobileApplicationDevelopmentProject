@@ -36,6 +36,7 @@ public class AdminInterfaceIt20149994Activity extends AppCompatActivity {
         etDeviceID = findViewById(R.id.etDeviceID);
     }
 
+    // Display all devices from all users
     public void viewAllAdmin(View view){
         DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
 

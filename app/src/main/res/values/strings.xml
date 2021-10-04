@@ -164,5 +164,6 @@
     <string name="etYear">Your device\'s manufactured year</string>
     <string name="etPrice">Enter the price you wish to sell</string>
     <string name="etSpecialNotes">Enter your special notes here</string>
+    <string name="adminViewAll">Display All Devices Added By Users</string>
 
 </resources>

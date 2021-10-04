@@ -15,7 +15,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#C0D6E1"
+            android:background="@drawable/home2"
             android:padding="12dp">
 
             <TextView

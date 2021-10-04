@@ -52,6 +52,10 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
         String specialNotes = etSpecialNotes.getText().toString();
         String username = etusername.getText().toString();
 
+        if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
+            Toast.makeText(this, "Enter Values", Toast.LENGTH_SHORT).show();
+        }
+
         boolean validation = validateInfo(year, price);
 
         if(validation){
@@ -180,6 +184,9 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
                 String price = etPrice.getText().toString();
                 String specialNotes = etSpecialNotes.getText().toString();
                 String deviceID = etDeviceID.getText().toString();
+                if(deviceName.isEmpty()||manufacturer.isEmpty()||price.isEmpty()){
+                    Toast.makeText(UserInterfaceIt20149994Activity.this, "Enter Values", Toast.LENGTH_SHORT).show();
+                }
 
                 boolean validation = validateInfo(year, price);
 

@@ -45,6 +45,10 @@ public class addMyCard extends AppCompatActivity {
                 String expireDate = monthYearText.getText().toString();
                 String cvvCode = cvv.getText().toString();
 
+                if (cardNo.equals("") ||cardHolderName.equals("") || expireDate.equals("")||cvvCode.equals("")){
+                    Toast.makeText(addMyCard.this, "Fill all Details", Toast.LENGTH_SHORT).show();
+                }
+
                 Boolean validation = validateCardDetails(cardNo, expireDate, cvvCode);
 
                 if (validation){
@@ -157,7 +161,12 @@ public class addMyCard extends AppCompatActivity {
                 String expireDate = monthYearText.getText().toString();
                 String cvvCode = cvv.getText().toString();
 
+                if(cardNo.isEmpty() || cardHolderName.isEmpty() || expireDate.isEmpty() || cvvCode.isEmpty()){
+                    Toast.makeText(addMyCard.this,"select or type your card details", Toast.LENGTH_SHORT).show();
+                }
+
                 Boolean validation = validateCardDetails(cardNo, expireDate, cvvCode);
+
                 if (validation){
                     if(cardNo.isEmpty() || cardHolderName.isEmpty() || expireDate.isEmpty() || cvvCode.isEmpty()){
                         Toast.makeText(addMyCard.this,"select or type your card details", Toast.LENGTH_SHORT).show();

@@ -43,6 +43,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
         etusername = findViewById(R.id.etusername);
     }
 
+    // Add new device
     public void savePhone(View view) {
         String deviceName = etDeviceName.getText().toString();
         String manufacturer = etManufacturer.getText().toString();
@@ -79,6 +80,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
         }
     }
 
+    // Display all saved devices by a single user
     public void viewAll(View view){
         DBHelperIT20149994 dbHelper = new DBHelperIT20149994(this);
         String username = etusername.getText().toString();
@@ -123,6 +125,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
     }
 
 
+    // Delete a device
     public void deletePhone(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete this device?");
@@ -161,7 +164,7 @@ public class UserInterfaceIt20149994Activity extends AppCompatActivity {
     }
 
 
-    //update phone
+    // Update device details
     public void updatePhone(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Update this device?");

@@ -47,7 +47,7 @@ public class xiomi10Activity extends AppCompatActivity implements LoaderManager.
         addtoCart = findViewById(R.id.addtocart);
         addtemperd = findViewById(R.id.addTemperdGlass);
 
-        // setting the name of drink
+        // setting the name of phone
 
         phoneName.setText("Xiomi 10Pro");
         imageView.setImageResource(R.drawable.mi10pro);

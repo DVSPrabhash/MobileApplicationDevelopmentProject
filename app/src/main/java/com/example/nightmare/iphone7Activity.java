@@ -47,7 +47,7 @@ public class iphone7Activity extends AppCompatActivity implements LoaderManager.
         addtoCart = findViewById(R.id.addtocart);
         addtemperd = findViewById(R.id.addTemperdGlass);
 
-        // setting the name of drink
+        // setting the name of phone
 
         phoneName.setText("Iphone 7plus");
         imageView.setImageResource(R.drawable.iphone7plus);

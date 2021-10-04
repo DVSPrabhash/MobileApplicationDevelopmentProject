@@ -7,26 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-
-
-<!--    Anuka Starts here-->
-
+    <!--Anuka-->
     <color name="btnAdd">#232FB1</color>
     <color name="btnUpdate">#04FF00</color>
     <color name="btnDelete">#AD2217</color>
     <color name="btnDisplayAll">#AFA120</color>
-
-<!--    Anuka Ends here-->
-
-    <!--<color name="purple_500">#DF671E1E</color> -->
-
-
-
-    <!--    Tharusha Starts here-->
+    <!--Tharusha-->
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-
-
 </resources>

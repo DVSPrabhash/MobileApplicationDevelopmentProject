@@ -47,7 +47,7 @@ public class nokiamacActivity extends AppCompatActivity implements LoaderManager
         addtoCart = findViewById(R.id.addtocart);
         addtemperd = findViewById(R.id.addTemperdGlass);
 
-        // setting the name of drink
+        // setting the name of phone
 
         phoneName.setText("NOKIA Mac");
         imageView.setImageResource(R.drawable.nokiyamac);

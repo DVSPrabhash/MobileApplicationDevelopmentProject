@@ -47,7 +47,7 @@ public class samsungs9Activity extends AppCompatActivity implements LoaderManage
         addtoCart = findViewById(R.id.addtocart);
         addtemperd = findViewById(R.id.addTemperdGlass);
 
-        // setting the name of drink
+        // setting the name of phone
 
         phoneName.setText("Samsung galaxys9 ");
         imageView.setImageResource(R.drawable.galaxys9);

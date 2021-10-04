@@ -185,7 +185,7 @@ public class addMyCard extends AppCompatActivity {
 
     //validation
     private Boolean validateCardDetails(String cardNo, String date, String pcvv){
-        if (cardNo.length() != 16){
+        if (cardNo.length() != 19 || !cardNo.matches("[0-9]{4}+-[0-9]{4}+-[0-9]{4}+-[0-9]{4}+")){
             cardNoText.requestFocus();
             cardNoText.setError("invalid card number");
             return false;
